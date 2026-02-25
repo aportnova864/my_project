@@ -1,0 +1,16 @@
+.EditButton{
+    padding: 10px;
+    border-radius: 50%;
+    border:none;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    background-color: #978aa1;
+}
+.EditButtonImg{
+    width: 20px;
+    height: 20px;
+}
+.EditButton:hover{
+    background-color: #2B86C5;
+}
