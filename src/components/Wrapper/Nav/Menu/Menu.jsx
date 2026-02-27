@@ -6,11 +6,11 @@ const Menu = () => {
             <ul>
                 <li><a href="/feed">Home</a></li>
                 <li><a href="/dialogs">Messages</a></li>
-                <li><a href="#">Friends</a></li>
-                <li><a href="#">Courses</a></li>
-                <li><a href="#">Music</a></li>
-                <li><a href="#">Videos</a></li>
-                <li><a href="#">Settings</a></li>
+                <li><a href="/friends">Friends</a></li>
+                <li><a href="/courses">Courses</a></li>
+                <li><a href="/music">Music</a></li>
+                <li><a href="/videos">Videos</a></li>
+                <li><a href="/settings">Settings</a></li>
             </ul>
         </div>
     )
