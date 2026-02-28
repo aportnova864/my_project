@@ -1,0 +1,16 @@
+.dialogs{
+    display: flex;
+    gap: 20px;
+    flex: 3;
+    padding: 10px;
+}
+.dialogsItems{
+    flex: 1;
+}
+.dialogsItems .active{
+    color: #a04974;
+    font-weight: 800;
+}
+.messagesItems{
+    flex: 2;
+}

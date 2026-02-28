@@ -5,6 +5,7 @@ import st from '../../../SectionName.module.css'
 import femaleIcon from "../../../../../assets/female_icon.jpg"
 import DeleteButton from './Buttons/DeleteButton'
 import EditButton from './Buttons/EditButton'
+import LikesButton from './Buttons/LikesButton'
 const Post = (props) => {
   return (
     <div className={`${s.ContentItem} ${styles.Post}`}>
@@ -17,8 +18,9 @@ const Post = (props) => {
       </div>
       <div className={styles.PostText}>{props.text}</div>
       <div className={styles.PostButtons}>
-        <DeleteButton />
+        <LikesButton likesCount = {props.likesCount}/> 
         <EditButton />
+        <DeleteButton />
       </div>
     </div>
   )

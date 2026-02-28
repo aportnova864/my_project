@@ -2,13 +2,12 @@ import React from 'react'
 import styles from './Feed.module.css'
 import AddPost from './AddPost/AddPost'
 import Post from './Post/Post'
-const Center = () => {
+const Center = (props) => {
+  let PostsElements = props.FeedPage.PostData.map(post=><Post name={post.name} time={post.time} text={post.text} likesCount={post.likesCount}/>)
   return (
     <div className={styles.center}>
       <AddPost />
-      <Post name="Anna Portnova" time="3 min ago" text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged." />
-      <Post name="Julia Metreveli" time="30 min ago" text="Updated profile image" />
-      <Post />
+      {PostsElements}
     </div>
   )
 }

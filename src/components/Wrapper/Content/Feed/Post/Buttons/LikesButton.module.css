@@ -1,0 +1,20 @@
+.LikesButton{
+    display: flex;
+    padding: 10px;
+    border-radius: 50px;
+    border:none;
+    cursor: pointer;
+    width: auto;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    background-color: #978aa1;
+    color: rgba(255, 255, 255, 0.719);
+}
+.LikesButtonImg{
+    width: 20px;
+    height: 20px;
+}
+.LikesButton:hover{
+    background-color: #2bc578;
+}
