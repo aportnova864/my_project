@@ -17,7 +17,7 @@ const Content = (props) => {
       <Routes>
         <Route path='/feed/' element={<Feed FeedPage={props.state.FeedPage} />} />
         <Route path='/dialogs/*' element={<Dialogs DialogsPage={props.state.DialogsPage} />} />
-        <Route path='friends' element={<Friends />} />
+        <Route path='friends' element={<Friends FriendsPage={props.state.FriendsPage}/>} />
         <Route path='courses' element={<Courses />} />
         <Route path='music' element={<Music />} />
         <Route path='videos' element={<Videos />} />

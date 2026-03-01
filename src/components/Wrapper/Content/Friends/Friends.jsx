@@ -1,9 +1,11 @@
 import React from 'react'
+import FriendItem from './FriendItem/FriendItem'
 
-const Friends = () => {
+const Friends = (props) => {
+  let FriendsElements = props.FriendsPage.FriendsData.map(friend=>(<FriendItem name = {friend.name} id = {friend.id}/>))
   return (
     <div>
-      Friends
+      {FriendsElements}
     </div>
   )
 }
