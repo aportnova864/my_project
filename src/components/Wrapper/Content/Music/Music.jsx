@@ -1,9 +1,11 @@
 import React from 'react'
+import MusicItem from './MusicItem/MusicItem'
 
-const Music = () => {
+const Music = (props) => {
+  let MusicElements = props.MusicPage.MusicData.map(audio=>(<MusicItem name={audio.name} author={audio.author} duration={audio.duration} />))
   return (
     <div>
-      Music
+      {MusicElements}
     </div>
   )
 }

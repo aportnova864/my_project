@@ -27,9 +27,21 @@ let state = {
             {id: 4, name: "John Doe", img: ""},
         ]
     },
-    CoursesPage: {},
-    MusicPage: {},
-    VideosPage: {},
+    CoursesPage: {
+        CoursesData: [
+            {id:1, name: "JavaScript", themes: 50, points: 5000, img: ""}
+        ]
+    },
+    MusicPage: {
+        MusicData: [
+            {id: 1, name: "Abc", author: "Abcde", duration: ""}
+        ]
+    },
+    VideosPage: {
+        VideosData: [
+            {id: 1, name: "Abc", author: "Abcde", duration: ""}
+        ]
+    },
     SettingsPage: {}
 }
 export default state;

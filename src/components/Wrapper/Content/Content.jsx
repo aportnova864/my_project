@@ -17,10 +17,10 @@ const Content = (props) => {
       <Routes>
         <Route path='/feed/' element={<Feed FeedPage={props.state.FeedPage} />} />
         <Route path='/dialogs/*' element={<Dialogs DialogsPage={props.state.DialogsPage} />} />
-        <Route path='friends' element={<Friends FriendsPage={props.state.FriendsPage}/>} />
-        <Route path='courses' element={<Courses />} />
-        <Route path='music' element={<Music />} />
-        <Route path='videos' element={<Videos />} />
+        <Route path='friends' element={<Friends FriendsPage={props.state.FriendsPage} />} />
+        <Route path='courses' element={<Courses CoursesPage={props.state.CoursesPage} />} />
+        <Route path='music' element={<Music MusicPage={props.state.MusicPage} />} />
+        <Route path='videos' element={<Videos VideosPage={props.state.VideosPage} />} />
         <Route path='settings' element={<Settings />} />
       </Routes>
       <Right />

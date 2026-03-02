@@ -1,9 +1,11 @@
 import React from 'react'
+import Course from './Course/Course'
 
-const Courses = () => {
+const Courses = (props) => {
+  let CoursesElements = props.CoursesPage.CoursesData.map(course=><Course name={course.name} themes={course.themes} points={course.points} img={course.img} />)
   return (
     <div>
-      Courses
+      {CoursesElements}
     </div>
   )
 }
