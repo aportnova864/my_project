@@ -1,3 +1,30 @@
 .AddPost{
-    
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+button{
+    width: auto;
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    background-color: #978aa1;
+    color: rgba(255, 255, 255, 0.719);
+    cursor: pointer;
+}
+button:hover{
+    background-color: #6008ad;
+}
+textarea{
+    width: 80%;
+    padding: 20px;
+    border: 1px dashed #978aa1;
+    border-radius: 20px;
+    resize: none;
+    height: 80px;
+}
+textarea:focus{
+    border: 1px dashed #978aa1;
+    outline: none;
 }

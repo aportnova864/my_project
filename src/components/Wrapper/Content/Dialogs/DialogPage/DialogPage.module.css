@@ -1,0 +1,7 @@
+.dialogPage{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 600px;
+    align-items: center;
+}

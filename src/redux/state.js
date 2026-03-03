@@ -1,3 +1,5 @@
+import { rerenderEntireTree } from "../render";
+
 let state = {
     DialogsPage: {
         DialogsData: [
@@ -7,16 +9,20 @@ let state = {
             { id: 4, name: "Elena" }
         ],
         MessagesData: [
-            { id: 1, message: "Hi, Anna!" },
-            { id: 2, message: "How are you?" },
-            { id: 3, message: "Yo!" },
-            { id: 4, message: "I love my life" }
-        ],
+            { id: 1, dialogId: 1, message: "Hi, how are you?"},
+            { id: 2, dialogId: 1, message: "I am writing you from Georgia"},
+            { id: 3, dialogId: 2, message: "Yo!"},
+            { id: 4, dialogId: 2, message: "Long time no see!"},
+            { id: 5, dialogId: 3, message: "Hi, have you seen this anime?"},
+            { id: 6, dialogId: 3, message: "It's awesome! Season 1 is the best"},
+            { id: 7, dialogId: 4, message: "Hi, how are you?"},
+            { id: 8, dialogId: 4, message: "I love my life!"},
+        ]
     },
     FeedPage: {
         PostData: [
-            { id: 1, text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.", name: "Anna Portnova", likesCount: "50", time: "3 min ago" },
-            { id: 2, text: "Updated profile image", name: "Julia Metreveli", likesCount: "150", time: "30 min ago" }
+            { id: 1, text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.", name: "Anna Portnova", likesCount: 50, time: "3 min ago" },
+            { id: 2, text: "Updated profile image", name: "Julia Metreveli", likesCount: 150, time: "30 min ago" }
         ]
     },
     FriendsPage: {
@@ -43,5 +49,14 @@ let state = {
         ]
     },
     SettingsPage: {}
+}
+export let addPost = (postMessage) => {
+    let newPost = {
+        id: 5,
+        text: postMessage,
+        likesCount: 0
+    }
+    state.FeedPage.PostData.push(newPost);
+    rerenderEntireTree(state);
 }
 export default state;

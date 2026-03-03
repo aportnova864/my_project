@@ -1,0 +1,10 @@
+.dialog{
+    display: flex;
+    gap: 50px;
+}
+.name{
+    width: 150px;
+}
+.lastMessage{
+    width: 300px;
+}
