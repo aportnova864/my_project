@@ -6,7 +6,7 @@ const Wrapper = (props) => {
   return (
     <div className={styles.wrapper}>
       <Nav />
-      <Content state={props.state} addPost={props.addPost} />
+      <Content state={props.state} dispatch={props.dispatch} />
     </div>
   )
 }

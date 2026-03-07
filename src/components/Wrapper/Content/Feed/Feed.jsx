@@ -6,7 +6,7 @@ const Center = (props) => {
   let PostsElements = props.FeedPage.PostData.map(post=><Post name={post.name} time={post.time} text={post.text} likesCount={post.likesCount}/>)
   return (
     <div className={styles.center}>
-      <AddPost addPost={props.addPost}/>
+      <AddPost dispatch={props.dispatch} newPostText = {props.FeedPage.newPostText}  />
       {PostsElements}
     </div>
   )

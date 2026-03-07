@@ -6,7 +6,7 @@ function App(props) {
   return (
     <div className="App">
       <BrowserRouter>
-        <Wrapper state={props.state} addPost={props.addPost} />
+        <Wrapper state={props.state} dispatch={props.dispatch} />
       </BrowserRouter>
     </div>
   );

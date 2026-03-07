@@ -16,9 +16,9 @@ const Content = (props) => {
     <div className={styles.content}>
       <Left />
       <Routes>
-        <Route path='/feed/' element={<Feed FeedPage={props.state.FeedPage} addPost={props.addPost}/>} />
-        <Route path='/dialogs/*' element={<Dialogs DialogsPage={props.state.DialogsPage} />} />
-        <Route path="/dialogs/:id" element={<DialogPage dialogs={props.state.DialogsPage} messages={props.state.DialogsPage} />} />
+        <Route path='/feed/' element={<Feed FeedPage={props.state.FeedPage} dispatch={props.dispatch}  />} />
+        <Route path='/dialogs/*' element={<Dialogs DialogsPage={props.state.DialogsPage} dispatch={props.dispatch}/>} />
+        <Route path="/dialogs/:id" element={<DialogPage dialogs={props.state.DialogsPage} messages={props.state.DialogsPage} dispatch={props.dispatch}/>} />
         <Route path='friends' element={<Friends FriendsPage={props.state.FriendsPage} />} />
         <Route path='courses' element={<Courses CoursesPage={props.state.CoursesPage} />} />
         <Route path='music' element={<Music MusicPage={props.state.MusicPage} />} />
