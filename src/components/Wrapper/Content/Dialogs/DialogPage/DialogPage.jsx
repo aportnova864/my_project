@@ -1,7 +1,7 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
 import styles from './DialogPage.module.css'
-import { addMessageActionCreator, updateMessageTextActionCreator } from '../../../../../redux/state';
+import { addMessageActionCreator, updateMessageTextActionCreator } from '../../../../../redux/dialogs-reducer';
 const DialogPage = (props) => {
     const params = useParams();
     const dialogId = Number(params.id);

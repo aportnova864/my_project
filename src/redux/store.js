@@ -1,7 +1,5 @@
-const ADD_POST = 'ADD-POST'
-const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT'
-const UPDATE_NEW_MESSAGE_BODY = 'UPDATE-NEW-MESSAGE-BODY'
-const ADD_MESSAGE = 'ADD-MESSAGE'
+import dialogsReducer from "./dialogs-reducer"
+import feedReducer from "./feed-reducer"
 let store = {
     _state: {
         DialogsPage: {
@@ -21,7 +19,7 @@ let store = {
                 { id: 7, dialogId: 4, message: "Hi, how are you?" },
                 { id: 8, dialogId: 4, message: "I love my life!" },
             ],
-            newMessageBody: "s"
+            newMessageBody: ""
         },
         FeedPage: {
             PostData: [
@@ -65,45 +63,9 @@ let store = {
         this._callSubscriber = observer;
     },
     dispatch(action) {
-        if (action.type === ADD_POST) {
-            let newPost = {
-                id: 5,
-                text: this._state.FeedPage.newPostText,
-                likesCount: 0
-            }
-            this._state.FeedPage.PostData.push(newPost);
-            this._state.FeedPage.newPostText = '';
-            this._callSubscriber(this._state);
-        } else if (action.type === UPDATE_NEW_POST_TEXT) {
-            this._state.FeedPage.newPostText = action.newText;
-            this._callSubscriber(this._state);
-        } else if (action.type === UPDATE_NEW_MESSAGE_BODY) {
-            this._state.DialogsPage.newMessageBody = action.newMessage;
-            this._callSubscriber(this._state);
-        } else if (action.type === ADD_MESSAGE) {
-            let newMessage = {
-                id: this._state.DialogsPage.MessagesData.length + 1,
-                message: this._state.DialogsPage.newMessageBody,
-                dialogId: action.dialogId
-            }
-            this._state.DialogsPage.MessagesData.push(newMessage);
-            this._state.DialogsPage.newMessageBody = '';
-            this._callSubscriber(this._state)
-        }
-    }
-}
-export const addPostActionCreator = () => ({type: ADD_POST})
-export const updateNewPostTextActionCreator = (text) => {
-  return {
-    type: UPDATE_NEW_POST_TEXT,
-    newText: text
-  }
-}
-export const addMessageActionCreator = (dialogId) => ({type: ADD_MESSAGE, dialogId: dialogId})
-export const updateMessageTextActionCreator = (messageText) => {
-    return {
-        type: UPDATE_NEW_MESSAGE_BODY,
-        newMessage: messageText
+        this._state.FeedPage = feedReducer(this._state.FeedPage, action);
+        this._state.DialogsPage = dialogsReducer(this._state.DialogsPage, action);
+        this._callSubscriber(this._state);
     }
 }
 export default store;

@@ -2,7 +2,7 @@ import React from 'react'
 import s from '../../../ContentItem.module.css'
 import styles from './AddPost.module.css'
 import st from '../../../SectionName.module.css'
-import { addPostActionCreator, updateNewPostTextActionCreator } from '../../../../../redux/state'
+import { addPostActionCreator, updateNewPostTextActionCreator } from '../../../../../redux/feed-reducer'
 
 const AddPost = (props) => {
   let newPostElement = React.createRef();
