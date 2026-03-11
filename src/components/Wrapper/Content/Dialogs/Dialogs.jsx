@@ -1,10 +1,7 @@
-import React from 'react'
-import styles from './Dialogs.module.css'
 import DialogItem from './DialogItem/DialogItem'
-import Message from './Message/Message'
 const Dialogs = (props) => {
-  const DialogsElements = props.DialogsPage.DialogsData.map(dialog=>{
-    const messagesForUser = props.DialogsPage.MessagesData.filter(m=>m.dialogId===dialog.id);
+  const DialogsElements = props.DialogsData.map(dialog=>{
+    const messagesForUser = props.MessagesData.filter(m=>m.dialogId===dialog.id);
     const lastMessage = messagesForUser.length ? messagesForUser[messagesForUser.length-1].message : "No messages";
     return (
     <DialogItem
