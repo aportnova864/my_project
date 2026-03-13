@@ -30,10 +30,10 @@ let store = {
         },
         FriendsPage: {
             FriendsData: [
-                { id: 1, name: "Julia Metreveli", img: "" },
-                { id: 2, name: "Fedor Portnov", img: "" },
-                { id: 3, name: "Sophiko Portnova", img: "" },
-                { id: 4, name: "John Doe", img: "" },
+                { id: 1, name: "Julia Metreveli", img: "", wrap: "", posts: [] },
+                { id: 2, name: "Fedor Portnov", img: "", wrap: "", posts: [] },
+                { id: 3, name: "Sophiko Portnova", img: "", wrap: "", posts: [] },
+                { id: 4, name: "John Doe", img: "", wrap: "", posts: [] },
             ]
         },
         CoursesPage: {

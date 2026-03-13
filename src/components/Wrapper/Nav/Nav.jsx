@@ -1,16 +1,16 @@
 import Logo from "./Logo/Logo"
 import styles from "./Nav.module.css"
-import Search from './Search/Search'
 import Menu from './Menu/Menu'
 import Options from './Options/Options'
-const Nav = () => {
+import { NavLink } from "react-router-dom"
+const Nav = (props) => {
   return (
-    <div className={styles.nav}>
+    <nav className={styles.nav}>
       <Logo />
-      <Search />
+      <NavLink to='/search'>Search</NavLink> 
       <Menu />
       <Options />
-    </div>
+    </nav>
   )
 }
 
