@@ -1,7 +1,6 @@
 import { connect } from "react-redux"
 import FriendPage from "./FriendPage"
 let mapStateToProps = (state, ownProps) => {
-debugger
     return {
         friend: state.FriendsPage.FriendsData.find(
             f => f.id === Number(ownProps.id)

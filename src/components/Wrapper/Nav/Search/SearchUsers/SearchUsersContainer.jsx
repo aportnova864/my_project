@@ -1,6 +1,6 @@
 import { connect } from "react-redux"
 import SearchUsers from "./SearchUsers"
-import { addFriendActionCreator, removeFriendActionCreator } from "../../../../../redux/friends-reducer"
+import { addFriendActionCreator, removeFriendActionCreator, setUsersActionCreator } from "../../../../../redux/friends-reducer"
 
 let mapStateToProps = (state) => {
     return {
@@ -14,6 +14,9 @@ let mapDispatchToProps = (dispatch) => {
         },
         removeFriend: (id) => {
             dispatch(removeFriendActionCreator(id))
+        },
+        setUsers: (UsersData) => {
+            dispatch(setUsersActionCreator(UsersData))
         }
     }
 }

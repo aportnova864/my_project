@@ -8,7 +8,7 @@ const FriendItem = (props) => {
   return (
     <div>
       <NavLink to={"/friends/" + props.id}>
-        {props.name}
+        <img alt='avatar'/>{props.name}
       </NavLink>
       <button onClick={() => removeFriend(props.id)}>Unfriend</button>
     </div>
